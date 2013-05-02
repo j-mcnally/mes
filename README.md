@@ -16,11 +16,19 @@ The commandline boilerplate was "borrowed" from middleman.
 
 ## Usage
 
-mes help
+make sure to install middleman first
 
--or
+    $ gem install middleman
 
-mes new [folder]
+then 
+
+    $ mes help
+
+
+-or-
+
+    $ mes new [folder]
+
 
 
 ## Contributing

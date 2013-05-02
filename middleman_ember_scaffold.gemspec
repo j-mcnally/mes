@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = MiddlemanEmberScaffold::VERSION
   spec.authors       = ["j-mcnally"]
   spec.email         = ["justin@kohactive.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = "A scaffolding tool for EmberJS / Middleman / Emblem (HAML for Handlebars) / Bootstrap"
+  spec.summary       = "A scaffolding tool for EmberJS"
+  spec.homepage      = "https://github.com/j-mcnally/mes"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency("thor", ["~> 0.17.0"])
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
 end

@@ -14,7 +14,7 @@ module MiddlemanEmberScaffold
           # Change flag to a module
           ARGV.unshift("help") if ARGV.delete("--help")
 
-          unless ARGV[1].nil? || ARGV[1].include?("-")
+          unless ARGV[1].nil? || ARGV[1].start_with?("-")
           	ARGV.push ARGV[1]
           	ARGV[1] = '-p'
           end

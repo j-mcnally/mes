@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'middleman_ember_scaffold/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "middleman_ember_scaffold"
+  spec.name          = "mes"
   spec.version       = MiddlemanEmberScaffold::VERSION
   spec.authors       = ["j-mcnally"]
   spec.email         = ["justin@kohactive.com"]

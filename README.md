@@ -1,24 +1,27 @@
 # MiddlemanEmberScaffold
 
-TODO: Write a gem description
+A gem to easily scaffold middleman projects that leverage EmberJS, Emblem and Bootstrap. 
+
+Emblem is basically haml for Handlebars.
+
+Also includes some sweet bootstrap sweetness.
+
+I mean cloning a boilerplate repo isn't as cool.
+
+The commandline boilerplate was "borrowed" from middleman.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'middleman_ember_scaffold'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install middleman_ember_scaffold
+    $ gem install mes
 
 ## Usage
 
-TODO: Write usage instructions here
+mes help
+
+-or
+
+mes new [folder]
+
 
 ## Contributing
 

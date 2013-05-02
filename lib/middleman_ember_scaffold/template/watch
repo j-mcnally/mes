@@ -1,0 +1,2 @@
+#!/bin/sh
+supervisor -e 'haml' -x 'middleman' -n 'exit' build

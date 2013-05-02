@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'middleman_ember_scaffold/load_paths'
+
+CWD=`pwd`.rstrip
+
+
+
+# Start the CLI
+MiddlemanEmberScaffold::Cli::Base.start

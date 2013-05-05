@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "middleman", "~>3.0.13"
 gem "middleman-livereload"
-gem "middleman-emblem", "~> 1.0.0"
+gem "middleman-emblem", "~> 1.1.1"
 gem 'bootstrap-sass', '~> 2.3.1.0', :require => false
 
 group :development do

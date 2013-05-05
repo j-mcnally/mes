@@ -53,11 +53,11 @@ activate :livereload
 #   end
 # end
 
+activate :emblem
+
 set :css_dir, "stylesheets"
 set :js_dir, "app"
 set :images_dir, "images"
-set :emblem_dir, "templates_emblem"
-set :emblem_ext, "emblem"
 
 # set :layout, "layout"
 set :js_assets_paths, ["#{root}/vendor/javascripts/"]
@@ -71,7 +71,7 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
-  activate :emblem
+  
   # Enable cache buster
   # activate :cache_buster
 
@@ -83,7 +83,11 @@ configure :build do
   # require "middleman-smusher"
   # activate :smusher
 
-  
+  #ignore things we don't need since we sprockets
+
+  %w(controller models views).each do |dir|
+    ignore "#{js_dir}/#{dir}*"
+  end
 
 
   # Or use a different image path

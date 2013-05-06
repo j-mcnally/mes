@@ -4,7 +4,6 @@
 #= require_tree ./views
 #= require_tree ./templates
 #= require      ./routes
-#= require ./templates
 
 
 

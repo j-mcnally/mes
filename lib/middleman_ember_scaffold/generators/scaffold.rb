@@ -11,10 +11,10 @@ module MiddlemanEmberScaffold
 	  	destination_root=args[0]
 	  	src = File.expand_path(File.join(File.dirname(__FILE__), "../template"))
 	  	directory(src, destination_root)
-	  	puts 'Running bundle install.......'
-	  	puts %x[bash -l -c 'cd #{destination_root}; bundle install']
-	  	puts 'Building scaffold....'
-	  	puts %x[bash -l -c 'cd #{destination_root}; middleman build']
+	  	#puts 'Running bundle install.......'
+	  	#puts %x['cd #{destination_root}; bundle install']
+	  	#puts 'Building scaffold....'
+	  	#puts %x['cd #{destination_root}; middleman build']
 	  end
 
 	end

@@ -19,6 +19,11 @@ module MiddlemanEmberScaffold
           	ARGV[1] = '-p'
           end
 
+          unless ARGV[3].nil? || ARGV[3].start_with?("-")
+            ARGV.push ARGV[3]
+            ARGV[3] = '-f'
+          end
+
           # Default command is server
           if ARGV[0] != "help" && (ARGV.length < 1 || ARGV.first.include?("-"))
             ARGV.unshift("help")
@@ -59,13 +64,20 @@ module MiddlemanEmberScaffold
       # Intercept missing methods and search subtasks for them
       # @param [Symbol] meth
       def method_missing(meth, *args)
-        meth = meth.to_s
+        unless meth.to_s.include?(":")
+          meth = meth.to_s
+          myclass = meth.to_s
+        else
+          parts = meth.to_s.split(":")
+          meth = parts[1]
+          myclass = parts[0]
+        end
 
         if self.class.map.has_key?(meth)
           meth = self.class.map[meth]
         end
 
-        klass, task = Thor::Util.find_class_and_task_by_namespace("#{meth}:#{meth}")
+        klass, task = Thor::Util.find_class_and_task_by_namespace("#{myclass}:#{meth}")
 
         if klass.nil?
           tasks_dir = File.join(Dir.pwd, "tasks")

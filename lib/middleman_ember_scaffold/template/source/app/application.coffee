@@ -12,4 +12,3 @@
 #= require "jquery.validate.min"
 #= require "date"
 #= require "./main"
-

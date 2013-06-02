@@ -1,5 +1,7 @@
 require "bundler/setup"
 Bundler.require
+require 'ember/source'
+require 'handlebars/source'
 
 # Livereload
 activate :livereload
@@ -60,7 +62,7 @@ set :js_dir, "app"
 set :images_dir, "images"
 
 # set :layout, "layout"
-set :js_assets_paths, ["#{root}/vendor/javascripts/"]
+
 set :css_assets_paths, ["#{root}/vendor/stylesheets/"]
 
 
@@ -88,6 +90,16 @@ configure :build do
   %w(controller models views).each do |dir|
     ignore "#{js_dir}/#{dir}*"
   end
+  ignore "#{js_dir}/routes.js"
+  ignore "#{js_dir}/main.js"
+  ignore "stylesheets/variables.css"
+
+  #tried to append the gem paths, didn't work, so copying on build for now.
+
+  FileUtils.cp(::Handlebars::Source.bundled_path, "#{root}/vendor/javascripts/")
+  FileUtils.cp(::Ember::Source.bundled_path_for("ember.js"), "#{root}/vendor/javascripts/")
+  FileUtils.cp(::Ember::Data::Source.bundled_path_for("ember-data.js"), "#{root}/vendor/javascripts/")
+  sprockets.append_path "#{root}/vendor/javascripts/"
 
 
   # Or use a different image path

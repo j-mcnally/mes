@@ -1,0 +1,1 @@
+class App.Foo extends Ember.Object

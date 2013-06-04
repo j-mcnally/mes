@@ -1,6 +1,6 @@
 # MiddlemanEmberScaffold
 
-A gem to easily scaffold middleman projects that leverage EmberJS, Emblem and Bootstrap. 
+A gem to easily scaffold middleman projects that leverage EmberJS, Emblem, EmberScript and Bootstrap. 
 
 Emblem is basically haml for Handlebars.
 

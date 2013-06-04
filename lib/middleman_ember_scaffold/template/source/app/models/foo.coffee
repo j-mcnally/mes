@@ -1,1 +1,0 @@
-App.Foo = Ember.Object.extend()

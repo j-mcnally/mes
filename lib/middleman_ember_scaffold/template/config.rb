@@ -56,6 +56,7 @@ activate :livereload
 # end
 
 activate :emblem
+activate :emberscript
 
 set :css_dir, "stylesheets"
 set :js_dir, "app"
@@ -90,8 +91,8 @@ configure :build do
   %w(controller models views).each do |dir|
     ignore "#{js_dir}/#{dir}*"
   end
-  ignore "#{js_dir}/routes.js"
-  ignore "#{js_dir}/main.js"
+  ignore "#{js_dir}/routes"
+  ignore "#{js_dir}/main"
   ignore "stylesheets/variables.css"
 
   #tried to append the gem paths, didn't work, so copying on build for now.

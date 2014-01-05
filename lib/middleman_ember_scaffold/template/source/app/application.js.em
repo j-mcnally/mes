@@ -3,7 +3,7 @@
 #= require "utils"
 #= require "handlebars"
 #= require "ember"
-#= require "ember-data"
+#= require "ember-model"
 #= require "underscore"
 #= require "bootstrap-modalmanager"
 #= require "bootstrap-modal"

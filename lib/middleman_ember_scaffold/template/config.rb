@@ -99,7 +99,6 @@ configure :build do
 
   FileUtils.cp(::Handlebars::Source.bundled_path, "#{root}/vendor/javascripts/")
   FileUtils.cp(::Ember::Source.bundled_path_for("ember.js"), "#{root}/vendor/javascripts/")
-  FileUtils.cp(::Ember::Data::Source.bundled_path_for("ember-data.js"), "#{root}/vendor/javascripts/")
   sprockets.append_path "#{root}/vendor/javascripts/"
 
 

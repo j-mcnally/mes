@@ -13,8 +13,7 @@ module MiddlemanEmberScaffold
         directory(src, destination_root)
         Dir.chdir(destination_root)
         run_bundle
-        #puts 'Building scaffold....'
-        #puts %x['cd #{destination_root}; middleman build']
+        bundle_command('exec middleman build')
       end
 
 
